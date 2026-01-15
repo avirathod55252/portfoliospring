@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: avinash-portfolio
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_APPLICATION_NAME=portfolio
+      - SERVER_PORT=8080
+    restart: unless-stopped
